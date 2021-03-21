@@ -80,7 +80,7 @@ module.exports = function (app, db) {
     });
 
     //update note
-    app.put('/notes/:id', (req, res) => {
+    app.patch('/notes/:id', (req, res) => {
         const id = req.params.id;
         const details = { '_id': new ObjectID(id) };
         if (req.body.ttl) {
